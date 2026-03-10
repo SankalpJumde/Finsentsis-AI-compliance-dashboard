@@ -394,7 +394,7 @@ def main():
 
         total_fines = sum(region_data['fine_amounts'])
         fig_pie.update_layout(
-            template="plotly_dark",
+            template="plotly",
             paper_bgcolor='rgba(0,0,0,0)',
             plot_bgcolor='rgba(0,0,0,0)',
             margin=dict(t=0, b=0, l=0, r=0),
@@ -438,41 +438,24 @@ def main():
             textposition='outside',
             textfont=dict(color='#e2e8f0')
         ))
-
-        # fig_bar.update_layout(
-        #     template="plotly",
-        #     paper_bgcolor='#0E1117',
-        #     plot_bgcolor='#0E1117',
-        #     margin=dict(t=20, b=40, l=40, r=40),
-        #     height=400,
-        #     xaxis=dict(
-        #         tickfont=dict(color='#94a3b8'),
-        #         gridcolor='rgba(56, 189, 248, 0.1)'
-        #     ),
-        #     yaxis=dict(
-        #         title="Risk Score",
-        #         titlefont=dict(color='#94a3b8'),
-        #         tickfont=dict(color='#94a3b8'),
-        #         gridcolor='rgba(56, 189, 248, 0.1)'
-        #     )
-        # )
+        
         fig_bar.update_layout(
-        template="plotly",
-        paper_bgcolor='#0E1117',
-        plot_bgcolor='#0E1117',
-        margin=dict(t=20, b=40, l=40, r=40),
-        height=400,
-        xaxis=dict(
-            tickfont=dict(color='#94a3b8'),
-            gridcolor='rgba(56, 189, 248, 0.1)'
-        ),
-        yaxis=dict(
-            title=dict(
-            text="Risk Score",
-            font=dict(color='#94a3b8')
+            template="plotly",
+            paper_bgcolor="rgba(0,0,0,0)",
+            plot_bgcolor="rgba(0,0,0,0)",
+            margin=dict(t=20, b=40, l=40, r=40),
+            height=400,
+            xaxis=dict(
+                tickfont=dict(color="#94a3b8"),
+                gridcolor="rgba(56, 189, 248, 0.1)"
             ),
-            tickfont=dict(color='#94a3b8'),
-            gridcolor='rgba(56, 189, 248, 0.1)'
+            yaxis=dict(
+                title=dict(
+                text="Risk Score",
+                font=dict(color="#94a3b8")
+                ),
+                tickfont=dict(color="#94a3b8"),
+                gridcolor="rgba(56, 189, 248, 0.1)"
             )
         )
     
@@ -509,14 +492,23 @@ def main():
         )
 
         fig_regions.update_layout(
-            template="plotly_dark",
-            paper_bgcolor='rgba(0,0,0,0)',
-            plot_bgcolor='rgba(0,0,0,0)',
+            template="plotly",
+            paper_bgcolor="rgba(0,0,0,0)",
+            plot_bgcolor="rgba(0,0,0,0)",
             margin=dict(t=20, b=40, l=40, r=40),
             height=350,
-            xaxis=dict(tickfont=dict(color='#94a3b8'), gridcolor='rgba(56, 189, 248, 0.1)'),
-            yaxis=dict(title="Risk Score", titlefont=dict(color='#94a3b8'), tickfont=dict(color='#94a3b8'), gridcolor='rgba(56, 189, 248, 0.1)'),
-            coloraxis_showscale=False
+            xaxis=dict(
+                tickfont=dict(color="#94a3b8"),
+                gridcolor="rgba(56, 189, 248, 0.1)"
+            ),
+            yaxis=dict(
+                title=dict(
+                    text="Risk Score",
+                    font=dict(color="#94a3b8")
+                ),
+                tickfont=dict(color="#94a3b8"),
+                gridcolor="rgba(56, 189, 248, 0.1)"
+            )
         )
 
         st.plotly_chart(fig_regions, use_container_width=True)
@@ -586,13 +578,20 @@ def main():
         ))
 
         fig_trend.update_layout(
-            template="plotly_dark",
+            template="plotly",
             paper_bgcolor='rgba(0,0,0,0)',
             plot_bgcolor='rgba(0,0,0,0)',
             margin=dict(t=20, b=40, l=40, r=40),
             height=350,
             xaxis=dict(tickfont=dict(color='#94a3b8'), gridcolor='rgba(56, 189, 248, 0.1)'),
-            yaxis=dict(title="Number of Cases", titlefont=dict(color='#94a3b8'), tickfont=dict(color='#94a3b8'), gridcolor='rgba(56, 189, 248, 0.1)'),
+            yaxis=dict(
+                title=dict(
+                    text="Number of Cases",
+                    font=dict(color="#94a3b8")
+                ),
+                tickfont=dict(color="#94a3b8"),
+                gridcolor="rgba(56, 189, 248, 0.1)"
+            ),   # ← add comma here
             hovermode='x unified',
             legend=dict(
                 orientation="h",
