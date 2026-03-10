@@ -1,2 +1,2 @@
 # Finsentsis-AI-compliance-dashboard
-Finsentsis AI Compliance
+Finsentsis AI Compliance Dashboard
