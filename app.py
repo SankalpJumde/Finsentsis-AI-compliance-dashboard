@@ -476,7 +476,7 @@ def main():
             )
         )
     
-            st.plotly_chart(fig_bar, use_container_width=True)
+        st.plotly_chart(fig_bar, use_container_width=True)
         st.markdown('</div>', unsafe_allow_html=True)
 
     # ============== REGIONAL ANALYSIS ==============
