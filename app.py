@@ -441,8 +441,8 @@ def main():
 
         fig_bar.update_layout(
             template="plotly",
-            paper_bgcolor='rgba(0,0,0,0)',
-            plot_bgcolor='rgba(0,0,0,0)',
+            paper_bgcolor='#0E1117',
+            plot_bgcolor='#0E1117',
             margin=dict(t=20, b=40, l=40, r=40),
             height=400,
             xaxis=dict(
