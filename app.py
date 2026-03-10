@@ -439,25 +439,44 @@ def main():
             textfont=dict(color='#e2e8f0')
         ))
 
+        # fig_bar.update_layout(
+        #     template="plotly",
+        #     paper_bgcolor='#0E1117',
+        #     plot_bgcolor='#0E1117',
+        #     margin=dict(t=20, b=40, l=40, r=40),
+        #     height=400,
+        #     xaxis=dict(
+        #         tickfont=dict(color='#94a3b8'),
+        #         gridcolor='rgba(56, 189, 248, 0.1)'
+        #     ),
+        #     yaxis=dict(
+        #         title="Risk Score",
+        #         titlefont=dict(color='#94a3b8'),
+        #         tickfont=dict(color='#94a3b8'),
+        #         gridcolor='rgba(56, 189, 248, 0.1)'
+        #     )
+        # )
         fig_bar.update_layout(
-            template="plotly",
-            paper_bgcolor='#0E1117',
-            plot_bgcolor='#0E1117',
-            margin=dict(t=20, b=40, l=40, r=40),
-            height=400,
-            xaxis=dict(
-                tickfont=dict(color='#94a3b8'),
-                gridcolor='rgba(56, 189, 248, 0.1)'
+        template="plotly",
+        paper_bgcolor='#0E1117',
+        plot_bgcolor='#0E1117',
+        margin=dict(t=20, b=40, l=40, r=40),
+        height=400,
+        xaxis=dict(
+            tickfont=dict(color='#94a3b8'),
+            gridcolor='rgba(56, 189, 248, 0.1)'
+        ),
+        yaxis=dict(
+            title=dict(
+            text="Risk Score",
+            font=dict(color='#94a3b8')
             ),
-            yaxis=dict(
-                title="Risk Score",
-                titlefont=dict(color='#94a3b8'),
-                tickfont=dict(color='#94a3b8'),
-                gridcolor='rgba(56, 189, 248, 0.1)'
+            tickfont=dict(color='#94a3b8'),
+            gridcolor='rgba(56, 189, 248, 0.1)'
             )
         )
-
-        st.plotly_chart(fig_bar, use_container_width=True)
+    
+            st.plotly_chart(fig_bar, use_container_width=True)
         st.markdown('</div>', unsafe_allow_html=True)
 
     # ============== REGIONAL ANALYSIS ==============
